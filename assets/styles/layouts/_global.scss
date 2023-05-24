@@ -6,10 +6,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: set.$black-bg;
     color: set.$white1;
     font-family: set.$font3;
+    text-align: center;
+    margin: 0 auto;
 }
 
 li {

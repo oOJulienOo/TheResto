@@ -16,10 +16,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(33, 32, 30);
   color: rgb(238, 238, 238);
   font-family: roboto-light, serif;
+  text-align: center;
+  margin: 0 auto;
 }
 
 li {
@@ -30,4 +36,65 @@ a,
 a:visited {
   color: rgb(238, 238, 238);
   text-decoration: none;
+}
+
+header {
+  height: 100vh;
+  background: url(/assets/img/bg-slider-06.jpg) center/cover fixed;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1450px;
+  min-height: 80px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+header nav span {
+  font-family: allura-regular, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+header nav .section-nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+header nav .social-nav {
+  width: 6%;
+  min-width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav a:hover {
+  transform: scale(1.05);
+}
+header .header-title {
+  padding: 220px 0 0;
+}
+header .header-title h2 {
+  height: 60px;
+  font-family: allura-regular, sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: rgb(166, 114, 69);
+  display: inline-block;
+}
+header .header-title h1 {
+  font-family: poppins-medium, sans-serif;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+header .header-title img {
+  padding: 40px 0;
+  width: 35px;
+}
+header .header-title p {
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }/*# sourceMappingURL=index.css.map */
