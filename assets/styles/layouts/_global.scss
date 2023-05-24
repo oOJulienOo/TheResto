@@ -1,0 +1,23 @@
+@use"..//settings" as set;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: set.$black-bg;
+    color: set.$white1;
+    font-family: set.$font3;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: set.$white1;
+    text-decoration: none;
+}

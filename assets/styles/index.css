@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "allura-regular";
+  src: url(..//fonts/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "poppins-medium";
+  src: url(..//fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "roboto-light";
+  src: url(..//fonts/Roboto-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(33, 32, 30);
+  color: rgb(238, 238, 238);
+  font-family: roboto-light, serif;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: rgb(238, 238, 238);
+  text-decoration: none;
+}/*# sourceMappingURL=index.css.map */
