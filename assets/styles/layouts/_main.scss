@@ -1,1 +1,161 @@
 @use"..//settings" as set;
+
+#main {
+
+    #discover {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        min-height: 550px;
+
+        .discover-card-container {
+            @include set.flex-center;
+            background: set.$white1;
+        }
+
+        .card {
+            border: 1px dashed set.$gold;
+            width: 95%;
+            height: 92%;
+            padding: 20px;
+
+            h3 {
+                height: 55px;
+            }
+
+            h4 {
+                color: set.$black1;
+                font-family: set.$font2;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+
+            p {
+                font-size: 1.3rem;
+                color: set.$black2;
+
+                @media screen and (max-width:1510px) {
+                    font-size: 1.1rem;
+                }
+
+            }
+
+            .img-chef {
+                width: 90px;
+                height: 90px;
+                border-radius: 50px;
+                background: url(/assets/img/avatar-01.jpg) center/cover;
+                margin: 50px auto 20px;
+            }
+
+            h5 {
+                font-size: 1.2rem;
+                color: set.$black1;
+                letter-spacing: 1px;
+            }
+
+            span {
+                text-transform: uppercase;
+                color: set.$grey1;
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+        }
+
+        .discover-img {
+            background: url(/assets/img/store-01.jpg) center/cover;
+        }
+    }
+
+    #menu {
+        min-height: 1200px;
+        background: url(/assets/img/bg-menu-01.jpg) bottom no-repeat;
+
+        .menu-container {
+            width: 55%;
+            margin: 0 auto;
+        }
+
+        .title-menu {
+            padding: 40px 0;
+
+            .fourchette {
+                padding: 10px 0 20px;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 80px;
+                font-size: 1.3rem;
+
+                a {
+                    height: 35px;
+                    border-bottom: 1px solid set.$white1;
+                }
+            }
+        }
+
+        .list-menu {
+            padding-bottom: 20px;
+            min-height: 800px;
+            background: set.$white1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 5px solid set.$gold;
+            color: set.$black1;
+
+            .dish {
+                padding: 0 30px;
+                display: flex;
+                align-items: center;
+                height: 200px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 85%;
+                    border-bottom: dashed 1px set.$gold;
+                    position: absolute;
+                    bottom: 0;
+
+
+
+                }
+
+                img {
+                    width: 110px;
+                    border-radius: 50%;
+                }
+
+                .dish-description {
+                    width: 100%;
+                    text-align: left;
+                    padding: 0 10px;
+
+                    h6 {
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        font-size: 1.3rem;
+                        text-transform: capitalize;
+                        padding: 5px 0 0;
+                    }
+                }
+
+                span {
+                    color: set.$gold;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    text-align: right;
+                }
+
+            }
+
+
+        }
+    }
+
+}

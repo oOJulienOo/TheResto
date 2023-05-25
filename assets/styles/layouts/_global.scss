@@ -16,7 +16,26 @@ body {
     font-family: set.$font3;
     text-align: center;
     margin: 0 auto;
+
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     height: 100%;
+    //     width: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     background: black;
+    //     animation: animBefore 1.5s ease forwards;
+    //     animation-delay: 0.15s;
+
+    //     @keyframes animBefore {
+    //         to {
+    //             opacity: 0;
+    //         }
+    //     }
+    // }
 }
+
 
 li {
     list-style: none;
@@ -26,4 +45,23 @@ a,
 a:visited {
     color: set.$white1;
     text-decoration: none;
+}
+
+a:hover {
+    transform: scale(1.05);
+    }
+
+h3 {
+    font-family: set.$font1;
+    color: set.$gold;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    padding-top: 20px;
+
+}
+
+.fourchette {
+    width: 40px;
+    margin: 20px;
 }

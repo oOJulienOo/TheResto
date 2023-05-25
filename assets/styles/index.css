@@ -38,6 +38,24 @@ a:visited {
   text-decoration: none;
 }
 
+a:hover {
+  transform: scale(1.05);
+}
+
+h3 {
+  font-family: allura-regular, sans-serif;
+  color: rgb(166, 114, 69);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  padding-top: 20px;
+}
+
+.fourchette {
+  width: 40px;
+  margin: 20px;
+}
+
 header {
   height: 100vh;
   background: url(/assets/img/bg-slider-06.jpg) center/cover fixed;
@@ -48,7 +66,7 @@ header nav {
   align-items: center;
   justify-content: space-between;
   max-width: 1450px;
-  min-height: 80px;
+  min-height: 100px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -70,11 +88,8 @@ header nav .social-nav {
   display: flex;
   justify-content: space-between;
 }
-header nav a:hover {
-  transform: scale(1.05);
-}
 header .header-title {
-  padding: 220px 0 0;
+  padding: 200px 0 0;
 }
 header .header-title h2 {
   height: 60px;
@@ -97,4 +112,133 @@ header .header-title img {
 header .header-title p {
   text-transform: uppercase;
   letter-spacing: 8px;
+}
+
+#main #discover {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 550px;
+}
+#main #discover .discover-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(238, 238, 238);
+}
+#main #discover .card {
+  border: 1px dashed rgb(166, 114, 69);
+  width: 95%;
+  height: 92%;
+  padding: 20px;
+}
+#main #discover .card h3 {
+  height: 55px;
+}
+#main #discover .card h4 {
+  color: rgb(0, 0, 0);
+  font-family: poppins-medium, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+#main #discover .card p {
+  font-size: 1.3rem;
+  color: rgb(10, 10, 10);
+}
+@media screen and (max-width: 1510px) {
+  #main #discover .card p {
+    font-size: 1.1rem;
+  }
+}
+#main #discover .card .img-chef {
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  background: url(/assets/img/avatar-01.jpg) center/cover;
+  margin: 50px auto 20px;
+}
+#main #discover .card h5 {
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+}
+#main #discover .card span {
+  text-transform: uppercase;
+  color: rgb(182, 182, 182);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+#main #discover .discover-img {
+  background: url(/assets/img/store-01.jpg) center/cover;
+}
+#main #menu {
+  min-height: 1200px;
+  background: url(/assets/img/bg-menu-01.jpg) bottom no-repeat;
+}
+#main #menu .menu-container {
+  width: 55%;
+  margin: 0 auto;
+}
+#main #menu .title-menu {
+  padding: 40px 0;
+}
+#main #menu .title-menu .fourchette {
+  padding: 10px 0 20px;
+}
+#main #menu .title-menu li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  font-size: 1.3rem;
+}
+#main #menu .title-menu li a {
+  height: 35px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+#main #menu .list-menu {
+  padding-bottom: 20px;
+  min-height: 800px;
+  background: rgb(238, 238, 238);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 5px solid rgb(166, 114, 69);
+  color: rgb(0, 0, 0);
+}
+#main #menu .list-menu .dish {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+#main #menu .list-menu .dish::after {
+  content: "";
+  width: 85%;
+  border-bottom: dashed 1px rgb(166, 114, 69);
+  position: absolute;
+  bottom: 0;
+}
+#main #menu .list-menu .dish img {
+  width: 110px;
+  border-radius: 50%;
+}
+#main #menu .list-menu .dish .dish-description {
+  width: 100%;
+  text-align: left;
+  padding: 0 10px;
+}
+#main #menu .list-menu .dish .dish-description h6 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+#main #menu .list-menu .dish .dish-description p {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  padding: 5px 0 0;
+}
+#main #menu .list-menu .dish span {
+  color: rgb(166, 114, 69);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: right;
 }/*# sourceMappingURL=index.css.map */
