@@ -36,6 +36,7 @@ a,
 a:visited {
   color: rgb(238, 238, 238);
   text-decoration: none;
+  transition: ease-in-out 0.1s;
 }
 
 a:hover {
@@ -49,11 +50,37 @@ h3 {
   text-transform: capitalize;
   font-weight: 400;
   padding-top: 20px;
+  height: 55px;
+}
+
+h4 {
+  color: rgb(0, 0, 0);
+  font-family: poppins-medium, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .fourchette {
   width: 40px;
   margin: 20px;
+}
+
+.date {
+  width: 100px;
+  height: 100px;
+  background: rgb(33, 32, 30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.date span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.date p {
+  font-size: 1.2rem;
 }
 
 header {
@@ -124,31 +151,15 @@ header .header-title p {
   justify-content: center;
   align-items: center;
   background: rgb(238, 238, 238);
+  padding: 20px;
 }
 #main #discover .card {
   border: 1px dashed rgb(166, 114, 69);
-  width: 95%;
-  height: 92%;
-  padding: 20px;
-}
-#main #discover .card h3 {
-  height: 55px;
-}
-#main #discover .card h4 {
-  color: rgb(0, 0, 0);
-  font-family: poppins-medium, sans-serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 800;
+  padding: 3%;
 }
 #main #discover .card p {
   font-size: 1.3rem;
   color: rgb(10, 10, 10);
-}
-@media screen and (max-width: 1510px) {
-  #main #discover .card p {
-    font-size: 1.1rem;
-  }
 }
 #main #discover .card .img-chef {
   width: 90px;
@@ -241,4 +252,214 @@ header .header-title p {
   font-size: 1.4rem;
   font-weight: 600;
   text-align: right;
+}
+#main #reservations {
+  padding-top: 100px;
+}
+#main #reservations .reservation-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 70%;
+  min-height: 630px;
+}
+#main #reservations .reservation-container .open-card-cont {
+  background: rgb(0, 0, 0);
+  padding: 7%;
+}
+#main #reservations .reservation-container .open-card-cont .open-card {
+  border: 1px dashed rgb(238, 238, 238);
+  height: 100%;
+}
+#main #reservations .reservation-container .open-card-cont .open-card h3 {
+  font-size: 3rem;
+  margin-top: 25px;
+  height: 60px;
+}
+#main #reservations .reservation-container .open-card-cont .open-card h4 {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+#main #reservations .reservation-container .open-card-cont .open-card h7 {
+  text-transform: uppercase;
+  font-family: poppins-medium, sans-serif;
+  color: rgb(166, 114, 69);
+  font-size: 1.4rem;
+}
+#main #reservations .reservation-container .open-card-cont .open-card h4 {
+  color: rgb(238, 238, 238);
+}
+#main #reservations .reservation-container .open-card-cont .open-card .open-date {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+#main #reservations .reservation-container .open-card-cont .open-card .open-date p {
+  padding: 20px 0;
+}
+#main #reservations .reservation-container .form-reservation-cont {
+  background: rgb(238, 238, 238);
+}
+#main #reservations .form-reservation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main #reservations .form-reservation .reservation-title {
+  padding: 50px 0 0;
+}
+#main #reservations .form-reservation .reservation-title h3 {
+  font-size: 3.5rem;
+  height: 65px;
+}
+#main #reservations .form-reservation .reservation-title h4 {
+  font-size: 2.4rem;
+}
+#main #reservations .form-reservation .reservation-title img {
+  margin: 50px;
+  width: 35px;
+}
+#main #reservations .form-reservation form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px 5px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+#main #reservations .form-reservation form .btn {
+  height: 60px;
+  width: 200px;
+  margin-top: 40px;
+  border: solid 1px rgb(33, 32, 30);
+  border-radius: 50px;
+  background: rgb(33, 32, 30);
+  color: rgb(238, 238, 238);
+  text-transform: uppercase;
+  font-family: poppins-medium, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+#main #reservations .form-reservation form .btn:hover {
+  scale: 1.05;
+}
+#main #reservations .form-reservation form input {
+  padding: 15px;
+  min-width: 100px;
+  max-width: 90%;
+  height: 50px;
+  font-size: 1rem;
+  font-family: roboto-light, serif;
+  border: none;
+  background: rgb(238, 238, 238);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+}
+#main #reservations .form-reservation form input:focus {
+  outline: none;
+}
+#main #reservations .form-reservation input[type=submit] {
+  grid-column-start: 2;
+}
+#main #events {
+  height: 100vh;
+}
+#main #events .events-container {
+  min-width: 1150px;
+  width: 70%;
+  margin: 0 auto;
+}
+#main #events .events-container .events-title {
+  padding: 110px 0 50px;
+}
+#main #events .events-container .events-title h3 {
+  font-size: 3.4rem;
+  height: 75px;
+}
+#main #events .events-container .events-title h4 {
+  font-size: 2.5rem;
+  color: rgb(238, 238, 238);
+  letter-spacing: 2px;
+}
+#main #events .events-container .event-card-container {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  grid-template-areas: "c1 c2" "c3 c2";
+  gap: 30px;
+}
+#main #events .events-container .event-card-container .event-card-right {
+  grid-area: c2;
+}
+#main #events .events-container .event-card-container .event-card-left {
+  min-height: 230px;
+  background: rgb(238, 238, 238);
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+#main #events .events-container .event-card-container .event-card-left .img-t {
+  background: url(..//..//img/event-01.jpg) center/cover;
+}
+#main #events .events-container .event-card-container .event-card-left .img-b {
+  background: url(..//..//img/event-02.jpg) center/cover;
+}
+#main #events .events-container .event-card-container .event-card-left .event-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main #events .events-container .event-card-container .event-card-left .event {
+  padding: 20px;
+}
+#main #events .events-container .event-card-container h3 {
+  font-family: roboto-light, serif;
+  font-size: 1.6rem;
+  color: rgb(33, 32, 30);
+  text-align: left;
+  padding-left: 20px;
+}
+#main #events .events-container .event-card-container .horraires {
+  display: flex;
+  gap: 5px;
+  color: rgb(182, 182, 182);
+  letter-spacing: 1px;
+  padding: 20px 0;
+}
+#main #events .events-container .event-card-container h4 {
+  display: inline;
+  float: left;
+  font-size: 1rem;
+  font-family: roboto-light, serif;
+  letter-spacing: 3px;
+  text-align: left;
+  padding-top: 30px;
+  transition: 0.1s ease-in-out;
+}
+#main #events .events-container .event-card-container h4:hover {
+  color: rgb(166, 114, 69);
+}
+#main #events .events-container .event-card-container .event-card-right {
+  background: url(..//..//img/event-03.jpg) center/cover;
+  padding: 7%;
+}
+#main #events .events-container .event-card-container .event-card-right .event-r {
+  background: rgb(238, 238, 238);
+  height: 100%;
+}
+#main #events .events-container .event-card-container .event-card-right .event-r .date {
+  margin: 0 auto;
+}
+#main #events .events-container .event-card-container .event-card-right .event-r h3 {
+  padding: 0;
+  text-align: center;
+  padding: 65px;
+}
+#main #events .events-container .event-card-container .event-card-right .event-r .horraires {
+  justify-content: center;
+  padding-bottom: 80px;
+}
+#main #events .events-container .event-card-container .event-card-right .event-r h4 {
+  float: initial;
 }/*# sourceMappingURL=index.css.map */

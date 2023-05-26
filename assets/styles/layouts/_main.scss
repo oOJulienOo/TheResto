@@ -10,34 +10,17 @@
         .discover-card-container {
             @include set.flex-center;
             background: set.$white1;
+            padding: 20px;
         }
 
         .card {
             border: 1px dashed set.$gold;
-            width: 95%;
-            height: 92%;
-            padding: 20px;
+            padding: 3%;
 
-            h3 {
-                height: 55px;
-            }
-
-            h4 {
-                color: set.$black1;
-                font-family: set.$font2;
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                font-weight: 800;
-            }
 
             p {
                 font-size: 1.3rem;
                 color: set.$black2;
-
-                @media screen and (max-width:1510px) {
-                    font-size: 1.1rem;
-                }
-
             }
 
             .img-chef {
@@ -151,9 +134,278 @@
                     font-weight: 600;
                     text-align: right;
                 }
+            }
+        }
+    }
 
+    // ---------------------*reservations---------------------
+
+    #reservations {
+        padding-top: 100px;
+
+        .reservation-container {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            width: 70%;
+            min-height: 630px;
+
+            .open-card-cont {
+                background: set.$black1;
+                padding: 7%;
+
+                .open-card {
+                    border: 1px dashed set.$white1;
+                    height: 100%;
+
+                    h3 {
+                        font-size: 3rem;
+                        margin-top: 25px;
+                        height: 60px;
+                    }
+
+                    h4 {
+                        font-size: 1.6rem;
+                        letter-spacing: 2px;
+                    }
+
+                    h7 {
+                        text-transform: uppercase;
+                        font-family: set.$font2;
+                        color: set.$gold;
+                        font-size: 1.4rem;
+                    }
+
+                    h4 {
+                        color: set.$white1;
+                    }
+
+                    .open-date {
+
+                        margin: 20px 0;
+                        padding: 0 10px;
+
+                        p {
+                            padding: 20px 0;
+                        }
+                    }
+                }
             }
 
+            .form-reservation-cont {
+                background: set.$white1;
+            }
+
+        }
+
+        // -----------form-----------
+
+        .form-reservation {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .reservation-title {
+                padding: 50px 0 0;
+
+                h3 {
+                    font-size: 3.5rem;
+                    height: 65px;
+                }
+
+                h4 {
+                    font-size: 2.4rem;
+                }
+
+                img {
+                    margin: 50px;
+                    width: 35px;
+                }
+            }
+
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px 5px;
+                max-width: 70%;
+                margin: 0 auto;
+
+
+                .btn {
+                    height: 60px;
+                    width: 200px;
+                    margin-top: 40px;
+                    border: solid 1px set.$black-bg;
+                    border-radius: 50px;
+                    background: set.$black-bg;
+                    color: set.$white1;
+                    text-transform: uppercase;
+                    font-family: set.$font2;
+                    font-size: 1.1rem;
+                    letter-spacing: 5px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        scale: 1.05;
+                    }
+
+                }
+
+                input {
+                    padding: 15px;
+                    min-width: 100px;
+                    max-width: 90%;
+                    height: 50px;
+                    font-size: 1rem;
+                    font-family: set.$font3;
+                    border: none;
+                    background: set.$white1;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                }
+            }
+
+            input[type=submit] {
+                grid-column-start: 2;
+            }
+        }
+
+    }
+
+    // -----------Events---------------
+
+    #events {
+        height: 100vh;
+
+        .events-container {
+            min-width: 1150px;
+            width: 70%;
+            margin: 0 auto;
+
+            .events-title {
+                padding: 110px 0 50px;
+
+                h3 {
+                    font-size: 3.4rem;
+                    height: 75px;
+                }
+
+                h4 {
+                    font-size: 2.5rem;
+                    color: set.$white1;
+                    letter-spacing: 2px;
+                }
+            }
+
+            .event-card-container {
+                display: grid;
+                grid-template-columns: 55% 40%;
+                grid-template-areas:
+                    "c1 c2"
+                    "c3 c2";
+                gap: 30px;
+
+                .event-card-right {
+                    grid-area: c2;
+                }
+
+                .event-card-left {
+                    min-height: 230px;
+                    background: set.$white1;
+                    display: grid;
+                    grid-template-columns: 40% 60%;
+
+                    .img-t {
+                        background: url(..//..//img/event-01.jpg) center/cover;
+                    }
+
+                    .img-b {
+                        background: url(..//..//img/event-02.jpg) center/cover;
+                    }
+
+                    .event-img {
+                        @include set.flex-center
+                    }
+
+                    .event {
+                        padding: 20px;
+
+                    }
+                }
+
+                h3 {
+                    font-family: set.$font3;
+                    font-size: 1.6rem;
+                    color: set.$black-bg;
+                    text-align: left;
+                    padding-left: 20px;
+                }
+
+                .horraires {
+                    display: flex;
+                    gap: 5px;
+                    color: set.$grey1;
+                    letter-spacing: 1px;
+                    padding: 20px 0;
+                }
+
+
+                h4 {
+                    display: inline;
+                    float: left;
+                    font-size: 1rem;
+                    font-family: set.$font3;
+                    letter-spacing: 3px;
+                    text-align: left;
+                    padding-top: 30px;
+                    transition: 0.1s ease-in-out;
+
+                    &:hover {
+                        color: set.$gold;
+                    }
+                }
+
+                .event-card-right {
+                    background: url(..//..//img/event-03.jpg) center/cover;
+                    padding: 7%;
+
+
+                    .event-r {
+                        background: set.$white1;
+                        height: 100%;
+
+                        .date {
+                            margin: 0 auto;
+                        }
+
+                        h3 {
+                            padding: 0;
+                            text-align: center;
+                            padding: 65px;
+                        }
+
+                        .horraires {
+                            justify-content: center;
+                            padding-bottom: 80px;
+                        }
+
+                        h4 {
+                            float: initial;
+                        }
+
+                    }
+                }
+            }
 
         }
     }
