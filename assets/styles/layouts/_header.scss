@@ -12,6 +12,12 @@ header {
         margin: 0 auto;
         padding: 0 10px;
 
+        
+        @media screen and (max-width: 800px)  {
+           padding: 0 10%;
+            
+         }
+
         span {
             font-family: set.$font1;
             font-size: 3rem;
@@ -24,6 +30,11 @@ header {
             justify-content: space-between;
             text-transform: uppercase;
             font-size: 0.9rem;
+
+            @media screen and (max-width: 800px)  {
+               display: none;
+               
+            }
         }
 
         .social-nav {
@@ -44,11 +55,22 @@ header {
             font-weight: 400;
             color: set.$gold;
             display: inline-block;
+
+            
+            @media screen and (max-width: 800px)  {
+                font-size: 3rem;
+                
+             }
         }
 
         h1 {
             @include set.title;
             font-size: 4.0rem;
+
+            @media screen and (max-width: 800px)  {
+                font-size: 3rem;
+                
+             }
         }
 
         img {
@@ -59,6 +81,11 @@ header {
         p {
             text-transform: uppercase;
             letter-spacing: 8px;
+
+            @media screen and (max-width: 800px)  {
+                font-size: 0.8rem;
+                
+             }
         }
     }
 

@@ -1,1 +1,118 @@
 @use"..//settings" as set;
+
+footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 300px;
+    background: url(..//..//img/bg-footer.jpg) center/cover;
+
+    @media screen and (max-width: 800px) {
+        display: block;
+        background: set.$black-bg;
+    }
+
+.footer-g {
+    margin-left: 30%;
+    text-align: left;
+    padding: 70px 50px 0 0;
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+
+    span {
+        font-family: set.$font1;
+        font-size: 3rem;
+        font-weight: 500;
+        color: set.$gold;
+    }
+
+    p {
+        padding-top: 10px;
+        font-size: 1.2rem;
+        font-weight: 100;
+        line-height: 35px;
+        color: rgb(182, 174, 172);
+      
+    }
+    }
+
+    .footer-d-cont {
+        text-align: left;
+        padding: 60px 0 0 60px;
+
+        @media screen and (max-width: 800px) {
+            text-align: center;
+            padding: 50px 0;
+            
+        }
+
+        h3 {
+            font-family: set.$font2;
+            font-size: 1.2rem;
+            color: set.$white1;
+            font-weight: 400;
+            text-transform: uppercase;
+            
+        }
+
+        input {
+            width: 35%;
+            min-width: 175px;
+            height: 40px;
+            font-size: 1.1rem;
+            padding-left: 15px;
+            background: transparent;
+            border: 1px solid  rgba(182, 174, 172, 0.13);
+            border-radius: 3px;
+            margin: 10px 0 40px;
+            color: rgb(182, 174, 172);
+
+            &:focus {
+                outline: 1px solid rgb(182, 174, 172);
+                }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 400px;
+
+            @media screen and (max-width: 1000px) {
+                display: block;
+                margin: 0 auto;
+                width: 300px;
+                }
+
+            h3 {
+                padding: 10px;
+
+              
+            }
+
+            li {
+              
+                @media screen and (max-width: 1000px)  {
+                    margin-top: 20px;
+                    width: 228px;
+                    margin: 0 auto;
+                }
+               
+               a {
+                padding: 0 20px;
+                color: rgba(182, 174, 172, 0.26);
+
+                i {
+                    transition: ease-in-out 0.2s;
+                }
+
+                i:hover {
+                    color:rgb(182, 174, 172);
+                }
+
+               }
+            }
+        }
+    }
+}

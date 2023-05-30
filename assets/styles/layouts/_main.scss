@@ -7,6 +7,10 @@
         grid-template-columns: 50% 50%;
         min-height: 550px;
 
+        @media screen and (max-width: 800px) {
+            display: block;
+        }
+
         .discover-card-container {
             @include set.flex-center;
             background: set.$white1;
@@ -24,9 +28,7 @@
             }
 
             .img-chef {
-                width: 90px;
-                height: 90px;
-                border-radius: 50px;
+
                 background: url(/assets/img/avatar-01.jpg) center/cover;
                 margin: 50px auto 20px;
             }
@@ -55,8 +57,18 @@
         background: url(/assets/img/bg-menu-01.jpg) bottom no-repeat;
 
         .menu-container {
+            min-width: 730px;
             width: 55%;
             margin: 0 auto;
+
+            @media screen and (max-width: 1000px) {
+                width: 95%;
+            }
+
+            @media screen and (max-width: 800px) {
+                min-width: 320px;
+            }
+
         }
 
         .title-menu {
@@ -72,9 +84,21 @@
                 padding: 0 80px;
                 font-size: 1.3rem;
 
+
+                @media screen and (max-width: 800px) {
+                    font-size: 1rem;
+                    padding: 0 4%;
+                    
+                }
+
                 a {
                     height: 35px;
                     border-bottom: 1px solid set.$white1;
+
+                    @media screen and (max-width: 800px) {
+                        padding: 0 5px;
+                        border-bottom: none;
+                       }
                 }
             }
         }
@@ -87,6 +111,10 @@
             grid-template-columns: 1fr 1fr;
             border-top: 5px solid set.$gold;
             color: set.$black1;
+
+            @media screen and (max-width: 800px) {
+                display: block;
+            }
 
             .dish {
                 padding: 0 30px;
@@ -109,6 +137,10 @@
                 img {
                     width: 110px;
                     border-radius: 50%;
+
+                    @media screen and (max-width: 500px) {
+                        width: 90px;
+                    }
                 }
 
                 .dish-description {
@@ -119,12 +151,20 @@
                     h6 {
                         text-transform: uppercase;
                         font-size: 1rem;
+
+                        @media screen and (max-width: 500px) {
+                            font-size: 0.8rem;
+                        }
                     }
 
                     p {
                         font-size: 1.3rem;
                         text-transform: capitalize;
                         padding: 5px 0 0;
+
+                        @media screen and (max-width: 500px) {
+                            font-size: 1rem;
+                        }
                     }
                 }
 
@@ -133,6 +173,10 @@
                     font-size: 1.4rem;
                     font-weight: 600;
                     text-align: right;
+
+                    @media screen and (max-width: 500px) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -149,6 +193,17 @@
             grid-template-columns: 30% 70%;
             width: 70%;
             min-height: 630px;
+            min-width: 730px;
+
+            @media screen and (max-width: 1000px) {
+                width: 95%;
+            }
+
+            @media screen and (max-width: 800px) {
+                display: block;
+                min-width: 300px;
+                margin-bottom: 80px;
+            }
 
             .open-card-cont {
                 background: set.$black1;
@@ -157,6 +212,10 @@
                 .open-card {
                     border: 1px dashed set.$white1;
                     height: 100%;
+
+                    @media screen and (max-width: 800px) {
+                        padding-bottom: 50px;
+                    }
 
                     h3 {
                         font-size: 3rem;
@@ -194,6 +253,10 @@
 
             .form-reservation-cont {
                 background: set.$white1;
+
+                @media screen and (max-width: 800px) {
+                    padding-bottom: 50px;
+                }
             }
 
         }
@@ -234,6 +297,12 @@
                 margin: 0 auto;
 
 
+                @media screen and (max-width: 800px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+
                 .btn {
                     height: 60px;
                     width: 200px;
@@ -256,7 +325,8 @@
 
                 }
 
-                input {
+                input,
+                select {
                     padding: 15px;
                     min-width: 100px;
                     max-width: 90%;
@@ -287,10 +357,17 @@
     #events {
         height: 100vh;
 
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+
         .events-container {
-            min-width: 1150px;
             width: 70%;
             margin: 0 auto;
+
+            @media screen and (max-width: 1000px) {
+                width: 95%;
+            }
 
             .events-title {
                 padding: 110px 0 50px;
@@ -314,6 +391,7 @@
                     "c1 c2"
                     "c3 c2";
                 gap: 30px;
+
 
                 .event-card-right {
                     grid-area: c2;
@@ -349,6 +427,10 @@
                     color: set.$black-bg;
                     text-align: left;
                     padding-left: 20px;
+
+                    @media screen and (max-width: 1350px) {
+                        font-size: 1.3rem;
+                    }
                 }
 
                 .horraires {
@@ -356,7 +438,8 @@
                     gap: 5px;
                     color: set.$grey1;
                     letter-spacing: 1px;
-                    padding: 20px 0;
+                    margin: 20px 0;
+
                 }
 
 
@@ -391,12 +474,12 @@
                         h3 {
                             padding: 0;
                             text-align: center;
-                            padding: 65px;
+                            padding: 65px 5px;
                         }
 
                         .horraires {
                             justify-content: center;
-                            padding-bottom: 80px;
+                            padding: 0 5px 80px;
                         }
 
                         h4 {
@@ -408,6 +491,95 @@
             }
 
         }
+    }
+
+    // ---------PLAN------------
+
+    #plan {
+        min-height: 820px;
+        position: relative;
+
+        @media screen and (max-width: 1000px) {
+            margin-top: 100px;
+        }
+
+        .text-plan-container {
+            padding: 60px 100px;
+            @include set.flex-center;
+            flex-direction: column;
+            width: 70%;
+            min-height: 450px;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            background: set.$white1;
+
+            @media screen and (max-width: 1000px) {
+                width: 95%;
+            }
+
+            @media screen and (max-width: 800px) {
+                padding: 50px 5px;
+            }
+
+            .chef-f {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                z-index: 2;
+                background: url(..//..//img/avatar-02.jpg) center/cover;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
+            }
+
+            p {
+                color: set.$black-bg;
+                font-size: 1.3rem;
+                line-height: 45px;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 1rem;
+                }
+            }
+
+            h3 {
+                font-family: set.$font3;
+                color: set.$black-bg;
+                font-size: 1.8rem;
+                font-weight: 500;
+                padding: 50px 0;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 1.4rem;
+                }
+            }
+
+            h4 {
+                font-family: set.$font3;
+                color: set.$gold;
+                font-size: 1.2rem;
+                font-weight: 300;
+                padding-top: 20px;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 1rem;
+                }
+
+            }
+
+        }
+
+        .background {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            height: 450px;
+            background: url(..//..//img/gmap.jpg) center/cover;
+        }
+
     }
 
 }

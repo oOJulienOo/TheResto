@@ -61,6 +61,12 @@ h4 {
   font-weight: 800;
 }
 
+.img-chef {
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+}
+
 .fourchette {
   width: 40px;
   margin: 20px;
@@ -97,6 +103,11 @@ header nav {
   margin: 0 auto;
   padding: 0 10px;
 }
+@media screen and (max-width: 800px) {
+  header nav {
+    padding: 0 10%;
+  }
+}
 header nav span {
   font-family: allura-regular, sans-serif;
   font-size: 3rem;
@@ -108,6 +119,11 @@ header nav .section-nav {
   justify-content: space-between;
   text-transform: uppercase;
   font-size: 0.9rem;
+}
+@media screen and (max-width: 800px) {
+  header nav .section-nav {
+    display: none;
+  }
 }
 header nav .social-nav {
   width: 6%;
@@ -126,11 +142,21 @@ header .header-title h2 {
   color: rgb(166, 114, 69);
   display: inline-block;
 }
+@media screen and (max-width: 800px) {
+  header .header-title h2 {
+    font-size: 3rem;
+  }
+}
 header .header-title h1 {
   font-family: poppins-medium, sans-serif;
   letter-spacing: 15px;
   text-transform: uppercase;
   font-size: 4rem;
+}
+@media screen and (max-width: 800px) {
+  header .header-title h1 {
+    font-size: 3rem;
+  }
 }
 header .header-title img {
   padding: 40px 0;
@@ -140,11 +166,21 @@ header .header-title p {
   text-transform: uppercase;
   letter-spacing: 8px;
 }
+@media screen and (max-width: 800px) {
+  header .header-title p {
+    font-size: 0.8rem;
+  }
+}
 
 #main #discover {
   display: grid;
   grid-template-columns: 50% 50%;
   min-height: 550px;
+}
+@media screen and (max-width: 800px) {
+  #main #discover {
+    display: block;
+  }
 }
 #main #discover .discover-card-container {
   display: flex;
@@ -162,9 +198,6 @@ header .header-title p {
   color: rgb(10, 10, 10);
 }
 #main #discover .card .img-chef {
-  width: 90px;
-  height: 90px;
-  border-radius: 50px;
   background: url(/assets/img/avatar-01.jpg) center/cover;
   margin: 50px auto 20px;
 }
@@ -187,8 +220,19 @@ header .header-title p {
   background: url(/assets/img/bg-menu-01.jpg) bottom no-repeat;
 }
 #main #menu .menu-container {
+  min-width: 730px;
   width: 55%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  #main #menu .menu-container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #main #menu .menu-container {
+    min-width: 320px;
+  }
 }
 #main #menu .title-menu {
   padding: 40px 0;
@@ -202,9 +246,21 @@ header .header-title p {
   padding: 0 80px;
   font-size: 1.3rem;
 }
+@media screen and (max-width: 800px) {
+  #main #menu .title-menu li {
+    font-size: 1rem;
+    padding: 0 4%;
+  }
+}
 #main #menu .title-menu li a {
   height: 35px;
   border-bottom: 1px solid rgb(238, 238, 238);
+}
+@media screen and (max-width: 800px) {
+  #main #menu .title-menu li a {
+    padding: 0 5px;
+    border-bottom: none;
+  }
 }
 #main #menu .list-menu {
   padding-bottom: 20px;
@@ -214,6 +270,11 @@ header .header-title p {
   grid-template-columns: 1fr 1fr;
   border-top: 5px solid rgb(166, 114, 69);
   color: rgb(0, 0, 0);
+}
+@media screen and (max-width: 800px) {
+  #main #menu .list-menu {
+    display: block;
+  }
 }
 #main #menu .list-menu .dish {
   padding: 0 30px;
@@ -233,6 +294,11 @@ header .header-title p {
   width: 110px;
   border-radius: 50%;
 }
+@media screen and (max-width: 500px) {
+  #main #menu .list-menu .dish img {
+    width: 90px;
+  }
+}
 #main #menu .list-menu .dish .dish-description {
   width: 100%;
   text-align: left;
@@ -242,16 +308,31 @@ header .header-title p {
   text-transform: uppercase;
   font-size: 1rem;
 }
+@media screen and (max-width: 500px) {
+  #main #menu .list-menu .dish .dish-description h6 {
+    font-size: 0.8rem;
+  }
+}
 #main #menu .list-menu .dish .dish-description p {
   font-size: 1.3rem;
   text-transform: capitalize;
   padding: 5px 0 0;
+}
+@media screen and (max-width: 500px) {
+  #main #menu .list-menu .dish .dish-description p {
+    font-size: 1rem;
+  }
 }
 #main #menu .list-menu .dish span {
   color: rgb(166, 114, 69);
   font-size: 1.4rem;
   font-weight: 600;
   text-align: right;
+}
+@media screen and (max-width: 500px) {
+  #main #menu .list-menu .dish span {
+    font-size: 1rem;
+  }
 }
 #main #reservations {
   padding-top: 100px;
@@ -262,6 +343,19 @@ header .header-title p {
   grid-template-columns: 30% 70%;
   width: 70%;
   min-height: 630px;
+  min-width: 730px;
+}
+@media screen and (max-width: 1000px) {
+  #main #reservations .reservation-container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #main #reservations .reservation-container {
+    display: block;
+    min-width: 300px;
+    margin-bottom: 80px;
+  }
 }
 #main #reservations .reservation-container .open-card-cont {
   background: rgb(0, 0, 0);
@@ -270,6 +364,11 @@ header .header-title p {
 #main #reservations .reservation-container .open-card-cont .open-card {
   border: 1px dashed rgb(238, 238, 238);
   height: 100%;
+}
+@media screen and (max-width: 800px) {
+  #main #reservations .reservation-container .open-card-cont .open-card {
+    padding-bottom: 50px;
+  }
 }
 #main #reservations .reservation-container .open-card-cont .open-card h3 {
   font-size: 3rem;
@@ -298,6 +397,11 @@ header .header-title p {
 }
 #main #reservations .reservation-container .form-reservation-cont {
   background: rgb(238, 238, 238);
+}
+@media screen and (max-width: 800px) {
+  #main #reservations .reservation-container .form-reservation-cont {
+    padding-bottom: 50px;
+  }
 }
 #main #reservations .form-reservation {
   height: 100%;
@@ -328,6 +432,12 @@ header .header-title p {
   max-width: 70%;
   margin: 0 auto;
 }
+@media screen and (max-width: 800px) {
+  #main #reservations .form-reservation form {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #main #reservations .form-reservation form .btn {
   height: 60px;
   width: 200px;
@@ -347,7 +457,8 @@ header .header-title p {
 #main #reservations .form-reservation form .btn:hover {
   scale: 1.05;
 }
-#main #reservations .form-reservation form input {
+#main #reservations .form-reservation form input,
+#main #reservations .form-reservation form select {
   padding: 15px;
   min-width: 100px;
   max-width: 90%;
@@ -358,7 +469,8 @@ header .header-title p {
   background: rgb(238, 238, 238);
   border-bottom: 1px solid rgba(0, 0, 0, 0.295);
 }
-#main #reservations .form-reservation form input:focus {
+#main #reservations .form-reservation form input:focus,
+#main #reservations .form-reservation form select:focus {
   outline: none;
 }
 #main #reservations .form-reservation input[type=submit] {
@@ -367,10 +479,19 @@ header .header-title p {
 #main #events {
   height: 100vh;
 }
+@media screen and (max-width: 800px) {
+  #main #events {
+    display: none;
+  }
+}
 #main #events .events-container {
-  min-width: 1150px;
   width: 70%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  #main #events .events-container {
+    width: 95%;
+  }
 }
 #main #events .events-container .events-title {
   padding: 110px 0 50px;
@@ -420,12 +541,17 @@ header .header-title p {
   text-align: left;
   padding-left: 20px;
 }
+@media screen and (max-width: 1350px) {
+  #main #events .events-container .event-card-container h3 {
+    font-size: 1.3rem;
+  }
+}
 #main #events .events-container .event-card-container .horraires {
   display: flex;
   gap: 5px;
   color: rgb(182, 182, 182);
   letter-spacing: 1px;
-  padding: 20px 0;
+  margin: 20px 0;
 }
 #main #events .events-container .event-card-container h4 {
   display: inline;
@@ -454,12 +580,198 @@ header .header-title p {
 #main #events .events-container .event-card-container .event-card-right .event-r h3 {
   padding: 0;
   text-align: center;
-  padding: 65px;
+  padding: 65px 5px;
 }
 #main #events .events-container .event-card-container .event-card-right .event-r .horraires {
   justify-content: center;
-  padding-bottom: 80px;
+  padding: 0 5px 80px;
 }
 #main #events .events-container .event-card-container .event-card-right .event-r h4 {
   float: initial;
+}
+#main #plan {
+  min-height: 820px;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  #main #plan {
+    margin-top: 100px;
+  }
+}
+#main #plan .text-plan-container {
+  padding: 60px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  min-height: 450px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  background: rgb(238, 238, 238);
+}
+@media screen and (max-width: 1000px) {
+  #main #plan .text-plan-container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #main #plan .text-plan-container {
+    padding: 50px 5px;
+  }
+}
+#main #plan .text-plan-container .chef-f {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 2;
+  background: url(..//..//img/avatar-02.jpg) center/cover;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+#main #plan .text-plan-container p {
+  color: rgb(33, 32, 30);
+  font-size: 1.3rem;
+  line-height: 45px;
+}
+@media screen and (max-width: 800px) {
+  #main #plan .text-plan-container p {
+    font-size: 1rem;
+  }
+}
+#main #plan .text-plan-container h3 {
+  font-family: roboto-light, serif;
+  color: rgb(33, 32, 30);
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 50px 0;
+}
+@media screen and (max-width: 800px) {
+  #main #plan .text-plan-container h3 {
+    font-size: 1.4rem;
+  }
+}
+#main #plan .text-plan-container h4 {
+  font-family: roboto-light, serif;
+  color: rgb(166, 114, 69);
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding-top: 20px;
+}
+@media screen and (max-width: 800px) {
+  #main #plan .text-plan-container h4 {
+    font-size: 1rem;
+  }
+}
+#main #plan .background {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 450px;
+  background: url(..//..//img/gmap.jpg) center/cover;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 300px;
+  background: url(..//..//img/bg-footer.jpg) center/cover;
+}
+@media screen and (max-width: 800px) {
+  footer {
+    display: block;
+    background: rgb(33, 32, 30);
+  }
+}
+footer .footer-g {
+  margin-left: 30%;
+  text-align: left;
+  padding: 70px 50px 0 0;
+}
+@media screen and (max-width: 800px) {
+  footer .footer-g {
+    display: none;
+  }
+}
+footer .footer-g span {
+  font-family: allura-regular, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(166, 114, 69);
+}
+footer .footer-g p {
+  padding-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 35px;
+  color: rgb(182, 174, 172);
+}
+footer .footer-d-cont {
+  text-align: left;
+  padding: 60px 0 0 60px;
+}
+@media screen and (max-width: 800px) {
+  footer .footer-d-cont {
+    text-align: center;
+    padding: 50px 0;
+  }
+}
+footer .footer-d-cont h3 {
+  font-family: poppins-medium, sans-serif;
+  font-size: 1.2rem;
+  color: rgb(238, 238, 238);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+footer .footer-d-cont input {
+  width: 35%;
+  min-width: 175px;
+  height: 40px;
+  font-size: 1.1rem;
+  padding-left: 15px;
+  background: transparent;
+  border: 1px solid rgba(182, 174, 172, 0.13);
+  border-radius: 3px;
+  margin: 10px 0 40px;
+  color: rgb(182, 174, 172);
+}
+footer .footer-d-cont input:focus {
+  outline: 1px solid rgb(182, 174, 172);
+}
+footer .footer-d-cont div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+@media screen and (max-width: 1000px) {
+  footer .footer-d-cont div {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+}
+footer .footer-d-cont div h3 {
+  padding: 10px;
+}
+@media screen and (max-width: 1000px) {
+  footer .footer-d-cont div li {
+    margin-top: 20px;
+    width: 228px;
+    margin: 0 auto;
+  }
+}
+footer .footer-d-cont div li a {
+  padding: 0 20px;
+  color: rgba(182, 174, 172, 0.26);
+}
+footer .footer-d-cont div li a i {
+  transition: ease-in-out 0.2s;
+}
+footer .footer-d-cont div li a i:hover {
+  color: rgb(182, 174, 172);
 }/*# sourceMappingURL=index.css.map */
